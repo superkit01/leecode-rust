@@ -1,7 +1,9 @@
-mod chapter38;
+// mod chapter38;
 
-mod chapter21;
-use chapter21::*;
+// mod chapter21;
+// use chapter21::*;
+mod chapter39;
+use chapter39::*;
 
 fn main() {
     println!("hello world");
@@ -12,23 +14,28 @@ fn main() {
     // println!("{}", result);
 
     //## chapter 21
-    let list1: Option<Box<ListNode>> = Some(Box::new(ListNode::new(
-        1,
-        Some(Box::new(ListNode::new(
-            2,
-            Some(Box::new(ListNode::new(4, None))),
-        ))),
-    )));
-    println!("{:?}", list1);
+    // let list1: Option<Box<ListNode>> = Some(Box::new(ListNode::new(
+    //     1,
+    //     Some(Box::new(ListNode::new(
+    //         2,
+    //         Some(Box::new(ListNode::new(4, None))),
+    //     ))),
+    // )));
+    // println!("{:?}", list1);
 
-    let list2: Option<Box<ListNode>> = Some(Box::new(ListNode::new(
-        1,
-        Some(Box::new(ListNode::new(
-            3,
-            Some(Box::new(ListNode::new(4, None))),
-        ))),
-    )));
-    println!("{:?}", list2);
-    let result21 = Solution::merge_two_lists(list1, list2);
-    println!("{:?}", result21)
+    // let list2: Option<Box<ListNode>> = Some(Box::new(ListNode::new(
+    //     1,
+    //     Some(Box::new(ListNode::new(
+    //         3,
+    //         Some(Box::new(ListNode::new(4, None))),
+    //     ))),
+    // )));
+    // println!("{:?}", list2);
+    // let result21 = Solution::merge_two_lists(list1, list2);
+    // println!("{:?}", result21)
+
+    let candidates = vec![2, 3, 5, 7];
+    let target = 11;
+    let result: Vec<Vec<i32>> = Solution::combination_sum(candidates, target);
+    println!("{:#?}", result)
 }
