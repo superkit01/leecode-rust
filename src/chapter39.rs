@@ -19,17 +19,16 @@ impl Solution {
         }
         if remaining == 0 {
             result.push(tmp.to_vec());
+            return;
         }
         
-        Self::digui(candidates, i+1, remaining, tmp, result);
-
-        let mut new_vec:Vec<i32>=vec![];
-        for elem in tmp.iter() {
-            new_vec.push(*elem);
-        }
-
+        let mut new_vec= tmp.clone();
         new_vec.push(candidates[i as usize]);
 
         Self::digui(candidates, i, remaining - candidates[i as usize], &new_vec, result);
+
+        Self::digui(candidates, i+1, remaining, tmp, result);
+
+  
     }
 }
