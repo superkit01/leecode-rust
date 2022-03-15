@@ -2,8 +2,13 @@
 
 // mod chapter21;
 // use chapter21::*;
-mod chapter39;
-use chapter39::*;
+
+// mod chapter39;
+// use chapter39::*;
+
+mod chapter40;
+use chapter40::*;
+
 
 fn main() {
     println!("hello world");
@@ -34,8 +39,8 @@ fn main() {
     // let result21 = Solution::merge_two_lists(list1, list2);
     // println!("{:?}", result21)
 
-    let candidates = vec![2, 3, 5, 7];
-    let target = 11;
+    let candidates = vec![10,1,2,7,6,1,5];
+    let target = 8;
     let result: Vec<Vec<i32>> = Solution::combination_sum(candidates, target);
     println!("{:?}", result)
 }
