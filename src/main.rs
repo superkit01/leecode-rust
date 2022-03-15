@@ -8,7 +8,7 @@ use chapter39::*;
 fn main() {
     println!("hello world");
 
-    //## chapter 38
+    // ## chapter 38
 
     // let result = chapter38::Solution::count_and_say(4);
     // println!("{}", result);
@@ -37,5 +37,5 @@ fn main() {
     let candidates = vec![2, 3, 5, 7];
     let target = 11;
     let result: Vec<Vec<i32>> = Solution::combination_sum(candidates, target);
-    println!("{:#?}", result)
+    println!("{:?}", result)
 }
