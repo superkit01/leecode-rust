@@ -7,28 +7,26 @@ impl Solution {
         let mut map: HashMap<i32, i32> = HashMap::new();
 
         let mut i = 0;
-        while i < nums.len() {
+        while i < nums.len() - 1 {
             if nums[i] == key {
-                if i + 1 < nums.len() {
-                    let  c = map.entry(nums[i + 1]).or_insert(0);
-                    *c+=1;
-                }
-                i += 2;
-            } else {
-                i += 1;
+                let count = map.entry(nums[i + 1]).or_insert(0);
+                *count += 1;
             }
+            i += 1;
         }
 
-        let mut  count = 0;
-        let mut target = 0;
+        // let mut count = 0;
+        // let mut target = 0;
 
-        for (k, v) in map.iter() {
-            if *v > count {
-                target = *k;
-                count = *v;
-            }
-        }
+        // for (k, v) in map.iter() {
+        //     if *v > count {
+        //         target = *k;
+        //         count = *v;
+        //     }
+        // }
 
-        return target;
+        let max = map.iter().max_by(|x, y| return (*x.1).cmp(&*y.1)).unwrap();
+
+        return *max.0;
     }
 }
