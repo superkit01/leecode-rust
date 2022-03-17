@@ -17,8 +17,10 @@
 // use chapter2190::*;
 
 
+mod chapter46;
 
-mod chapter720;
+
+// mod chapter720;
 
 fn main() {
     println!("hello world");
@@ -68,8 +70,12 @@ fn main() {
     // println!("{}", result)
 
     //chapter720
-    let mut  words:Vec<String> = vec![String::from("a"),String::from("banana"),String::from("aa"),String::from("aaa"), String::from("aae")];
-    let result= chapter720::Solution::longest_word(&mut words);
-    println!("{}",result)
+    // let words:Vec<String> = vec![String::from("a"),String::from("banana"),String::from("aa"),String::from("aaa"), String::from("aae")];
+    // let result= chapter720::Solution::longest_word(words);
+    // println!("{}",result);
+    let nums:Vec<i32> = vec![1,2,3];
+    let result=chapter46::Solution::permute(nums);
+    print!("{:?}",result)
+
 
 }
