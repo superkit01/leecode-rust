@@ -1,57 +1,42 @@
-pub struct Solution{}
+use std::collections::HashSet;
+use std::cmp::Ordering;
+
+pub struct Solution {}
 
 impl Solution {
-    pub fn longest_word(words:  Vec<String>) -> String {
-
-        if words.len()==1 {
-            if words[0].len()!=1 {
-                return String::from("")
-            }else{
-             return words[0].clone();
-            }
-        }
-
+    pub fn longest_word(words: Vec<String>) -> String {
         let mut mut_words=words;
+
+        let mut set: HashSet<String> = HashSet::new();
         mut_words.sort();
-        println!("{:?}",mut_words);
 
-
-        let mut result:Vec<String>=Vec::new();
-        Self::digui(0, mut_words.len(), &mut mut_words, &mut result);
-
-        let mut max=String::from("");
-        for elem in result.iter() {
-            if elem.len()>max.len(){
-                max=elem.clone();
+        for elem in mut_words.iter() {
+            if elem.len() == 1 {
+                set.insert(elem.clone());
+                continue;
+            }
+            if set.contains(&elem[0..elem.len() - 1]) {
+                set.insert(elem.clone());
+                continue;
             }
         }
 
 
-        return max;
-    }
+       let max= set.iter().max_by(|x, y| {
+            let xl = x.len() as i32;
+            let yl = y.len() as i32;
+            if xl>yl {
+                return Ordering::Greater;
+            }else if xl<yl {
+                return Ordering::Less;
+            } else{
+                return y.cmp(&x);
+            }  
+        });
 
-
-    pub fn digui( mut start:  usize,len:usize, words: &mut Vec<String>,result:&mut  Vec<String> ){
-        if start>=len {
-            return;
+        match max {
+            None=> {return String::from("");}
+            Some(v)=>{return v.clone();}
         }
-        if words[start as usize].len()!=1 {
-            Self::digui(start+1, len, words,result);
-            return;
-        }
-        
-        result.push(words[start].clone());
-        println!("{:?}",result);
-
-        while start <len-1 {
-            if words[start+1].len() -words[start].len()!=1 || words[start+1].starts_with(words[start].as_str()) {
-               Self:: digui(start+1, len, words,result);
-               return;
-            }
-            result.push(words[start+1].clone());
-            start+=1;
-        }
-
-
     }
 }

@@ -68,8 +68,8 @@ fn main() {
     // println!("{}", result)
 
     //chapter720
-    let words:Vec<String> = vec![String::from("a"),String::from("banana"),String::from("aa"),String::from("aaa"), String::from("aae")];
-    let result= chapter720::Solution::longest_word(words);
+    let mut  words:Vec<String> = vec![String::from("a"),String::from("banana"),String::from("aa"),String::from("aaa"), String::from("aae")];
+    let result= chapter720::Solution::longest_word(&mut words);
     println!("{}",result)
 
 }
