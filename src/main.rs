@@ -12,13 +12,13 @@
 // mod chapter26;
 // use chapter26::*;
 
-
 // mod chapter2190;
 // use chapter2190::*;
 
+// mod chapter46;
 
-mod chapter46;
-
+// mod chapter2043;
+// use chapter2043::Bank;
 
 // mod chapter720;
 
@@ -49,8 +49,7 @@ fn main() {
     // println!("{:?}", list2);
     // let result21 = Solution::merge_two_lists(list1, list2);
     // println!("{:?}", result21)
-    
-    
+
     //# chapter40
     // let candidates = vec![1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
     // let target = 30;
@@ -73,9 +72,17 @@ fn main() {
     // let words:Vec<String> = vec![String::from("a"),String::from("banana"),String::from("aa"),String::from("aaa"), String::from("aae")];
     // let result= chapter720::Solution::longest_word(words);
     // println!("{}",result);
-    let nums:Vec<i32> = vec![1,2,3];
-    let result=chapter46::Solution::permute(nums);
-    print!("{:?}",result)
 
+    //chapter46
+    // let nums:Vec<i32> = vec![1,2,3];
+    // let result=chapter46::Solution::permute(nums);
+    // print!("{:?}",result)
 
+    //chapter2043
+    // let bank: Bank = Bank::new(vec![10, 100, 20, 50, 30]);
+    // bank.withdraw(3, 10);
+    // bank.transfer(5, 1, 20);
+    // bank.deposit(5, 20);
+    // bank.transfer(3, 4, 15);
+    // bank.withdraw(10, 50);
 }
