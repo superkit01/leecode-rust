@@ -22,10 +22,12 @@
 
 // mod chapter720;
 
-mod chapter606;
-use chapter606::*;
-use std::cell::RefCell;
-use std::rc::Rc;
+// mod chapter606;
+// use chapter606::*;
+// use std::cell::RefCell;
+// use std::rc::Rc;
+
+mod chapter27;
 
 fn main() {
     println!("hello world");
@@ -99,25 +101,25 @@ fn main() {
     //  4
     //
     // 输出: "1(2(4))(3)"
-    let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
-        val: 1,
-        left: Some(Rc::new(RefCell::new(TreeNode {
-            val: 2,
-            left: Some(Rc::new(RefCell::new(TreeNode {
-                val: 4,
-                left: None,
-                right: None,
-            }))),
-            right: None,
-        }))),
-        right: Some(Rc::new(RefCell::new(TreeNode {
-            val: 3,
-            left: None,
-            right: None,
-        }))),
-    })));
+    // let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
+    //     val: 1,
+    //     left: Some(Rc::new(RefCell::new(TreeNode {
+    //         val: 2,
+    //         left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+    //         right: None,
+    //     }))),
+    //     right: Some(Rc::new(RefCell::new(TreeNode ::new(3)))),
+    // })));
+    // let result= chapter606::Solution::tree2str(root);
+    // println!("{}",result)
 
-    let result= chapter606::Solution::tree2str(root);
 
+
+    //chapter27
+    let mut  nums=vec![3,2,2,3];
+    let target =3;
+    let result= chapter27::Solution::remove_element(&mut nums, target);
     println!("{}",result)
+
+    
 }
