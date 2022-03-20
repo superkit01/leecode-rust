@@ -22,6 +22,11 @@
 
 // mod chapter720;
 
+mod chapter606;
+use chapter606::*;
+use std::cell::RefCell;
+use std::rc::Rc;
+
 fn main() {
     println!("hello world");
 
@@ -85,4 +90,34 @@ fn main() {
     // bank.deposit(5, 20);
     // bank.transfer(3, 4, 15);
     // bank.withdraw(10, 50);
+
+    //chapter606
+    //      1
+    //     /   \
+    //    2     3
+    //   /
+    //  4
+    //
+    // 输出: "1(2(4))(3)"
+    let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
+        val: 1,
+        left: Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: Some(Rc::new(RefCell::new(TreeNode {
+                val: 4,
+                left: None,
+                right: None,
+            }))),
+            right: None,
+        }))),
+        right: Some(Rc::new(RefCell::new(TreeNode {
+            val: 3,
+            left: None,
+            right: None,
+        }))),
+    })));
+
+    let result= chapter606::Solution::tree2str(root);
+
+    println!("{}",result)
 }
