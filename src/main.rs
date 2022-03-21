@@ -31,6 +31,8 @@
 
 // mod chapter27;
 
+mod chapter48;
+
 fn main() {
     println!("hello world");
 
@@ -142,5 +144,11 @@ fn main() {
     // let target =3;
     // let result= chapter27::Solution::remove_element(&mut nums, target);
     // println!("{}",result)
+
+
+    //chapter48
+    let mut matrix=vec![vec![1,2,3],vec![4,5,6],vec![7,8,9]];
+    chapter48::Solution::rotate(&mut matrix);
+    println!("{:?}",matrix);
 
 }
