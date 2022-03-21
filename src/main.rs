@@ -7,6 +7,7 @@
 // mod chapter40;
 
 // mod chapter26;
+// use chapter26::*;
 
 // mod chapter2190;
 
@@ -16,8 +17,19 @@
 
 // mod chapter720;
 
-mod chapter13;
+// mod chapter13;
 
+// mod chapter2043;
+// use chapter2043::Bank;
+
+// mod chapter720;
+
+// mod chapter606;
+// use chapter606::*;
+// use std::cell::RefCell;
+// use std::rc::Rc;
+
+// mod chapter27;
 
 fn main() {
     println!("hello world");
@@ -46,6 +58,7 @@ fn main() {
     // println!("{:?}", list2);
     // let result21 = Chapter21::Solution::merge_two_lists(list1, list2);
     // println!("{:?}", result21)
+
     //# chapter40
     // let candidates = vec![1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
     // let target = 30;
@@ -75,6 +88,35 @@ fn main() {
     // let result= chapter720::Solution::longest_word(words);
     // println!("{}",result);
 
+
+    //chapter2043
+    // let bank: Bank = Bank::new(vec![10, 100, 20, 50, 30]);
+    // bank.withdraw(3, 10);
+    // bank.transfer(5, 1, 20);
+    // bank.deposit(5, 20);
+    // bank.transfer(3, 4, 15);
+    // bank.withdraw(10, 50);
+
+    //chapter606
+    //      1
+    //     /   \
+    //    2     3
+    //   /
+    //  4
+    //
+    // 输出: "1(2(4))(3)"
+    // let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
+    //     val: 1,
+    //     left: Some(Rc::new(RefCell::new(TreeNode {
+    //         val: 2,
+    //         left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+    //         right: None,
+    //     }))),
+    //     right: Some(Rc::new(RefCell::new(TreeNode ::new(3)))),
+    // })));
+    // let result= chapter606::Solution::tree2str(root);
+    // println!("{}",result)
+
     //chapter46
     // let nums:Vec<i32> = vec![1,2,3];
     // let result=chapter46::Solution::permute(nums);
@@ -91,7 +133,14 @@ fn main() {
     // println!("{}", result)
 
     //chapter13
-    let s= String::from("MCMXCIV");
-    let result=chapter13::Solution::roman_to_int(s);
-    println!("{}",result);
+    // let s= String::from("MCMXCIV");
+    // let result=chapter13::Solution::roman_to_int(s);
+    // println!("{}",result);
+
+    //chapter27
+    // let mut  nums=vec![3,2,2,3];
+    // let target =3;
+    // let result= chapter27::Solution::remove_element(&mut nums, target);
+    // println!("{}",result)
+
 }
