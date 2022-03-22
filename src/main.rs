@@ -31,7 +31,9 @@
 
 // mod chapter27;
 
-mod chapter48;
+// mod chapter48;
+
+mod chapter35;
 
 fn main() {
     println!("hello world");
@@ -90,7 +92,6 @@ fn main() {
     // let result= chapter720::Solution::longest_word(words);
     // println!("{}",result);
 
-
     //chapter2043
     // let bank: Bank = Bank::new(vec![10, 100, 20, 50, 30]);
     // bank.withdraw(3, 10);
@@ -145,10 +146,14 @@ fn main() {
     // let result= chapter27::Solution::remove_element(&mut nums, target);
     // println!("{}",result)
 
-
     //chapter48
-    let mut matrix=vec![vec![1,2,3],vec![4,5,6],vec![7,8,9]];
-    chapter48::Solution::rotate(&mut matrix);
-    println!("{:?}",matrix);
+    // let mut matrix=vec![vec![1,2,3],vec![4,5,6],vec![7,8,9]];
+    // chapter48::Solution::rotate(&mut matrix);
+    // println!("{:?}",matrix);
 
+    //chapter35
+    let nums = vec![1, 3];
+    let target = 0;
+    let result = chapter35::Solution::search_insert(nums, target);
+    println!("{}", result)
 }
