@@ -8,7 +8,7 @@ impl Solution {
         while left <= right {
             let mid :i32 = (left + right) / 2;
 
-            if nums[mid as usize] > target {
+            if nums[mid as usize] >= target {
                 right = mid -1
             } else {
                 left = mid  +1
