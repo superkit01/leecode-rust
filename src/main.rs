@@ -34,7 +34,9 @@
 // mod chapter48;
 
 // mod chapter35;
-mod chapter49;
+// mod chapter49;
+
+mod chapter67;
 
 fn main() {
     println!("hello world");
@@ -159,10 +161,13 @@ fn main() {
     // println!("{}", result)
 
     //chapter49
-    let strs=vec![String::from("eat"),String::from("tea"),String::from("tan"),String::from("ate"),String::from("nat"),String::from("bat")];
+    // let strs=vec![String::from("eat"),String::from("tea"),String::from("tan"),String::from("ate"),String::from("nat"),String::from("bat")];
+    // let result = chapter49::Solution::group_anagrams(strs);
+    // println!("{:?}",result);
 
-    let result = chapter49::Solution::group_anagrams(strs);
 
+    //chapter67
+    let result=chapter67::Solution::add_binary(String::from("1111"),  String::from("11"));
+    println!("{}",result);
 
-    println!("{:?}",result);
 }
