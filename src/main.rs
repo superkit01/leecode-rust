@@ -42,7 +42,12 @@
 
 // mod chapter661;
 
-mod chapter80;
+// mod chapter80;
+
+mod chapter94;
+use chapter94::*;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 fn main() {
     println!("hello world");
@@ -192,7 +197,23 @@ fn main() {
     // println!("{:?}",result);
 
     //chapter80
-    let mut nums = vec![1, 2, 2];
-    let result = chapter80::Solution::remove_duplicates(&mut nums);
-    println!("{:?}", result)
+    // let mut nums = vec![1, 2, 2];
+    // let result = chapter80::Solution::remove_duplicates(&mut nums);
+    // println!("{:?}", result)
+    
+
+    //chapter94
+    let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
+        val: 1,
+        left: Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+            right: None,
+        }))),
+        right: Some(Rc::new(RefCell::new(TreeNode ::new(3)))),
+    })));
+    let result= chapter94::Solution::inorder_traversal(root);
+    println!("{:?}",result)
+
+
 }
