@@ -37,7 +37,10 @@
 // mod chapter49;
 
 // mod chapter67;
-mod chapter240;
+
+// mod chapter240;
+
+mod chapter661;
 
 fn main() {
     println!("hello world");
@@ -166,15 +169,25 @@ fn main() {
     // let result = chapter49::Solution::group_anagrams(strs);
     // println!("{:?}",result);
 
-
     //chapter67
     // let result=chapter67::Solution::add_binary(String::from("1111"),  String::from("11"));
     // println!("{}",result);
 
-
     //chapter240
-    let matrix=vec![vec![1,4,7,11,15],vec![2,5,8,12,19],vec![3,6,9,16,22],vec![10,13,14,17,24],vec![18,21,23,26,30]];
-    let result=chapter240::Solution::find_number_in2_d_array(matrix, 5);
-    println!("{}",result)
+    // let matrix=vec![vec![1,4,7,11,15],vec![2,5,8,12,19],vec![3,6,9,16,22],vec![10,13,14,17,24],vec![18,21,23,26,30]];
+    // let result=chapter240::Solution::find_number_in2_d_array(matrix, 5);
+    // println!("{}",result)
+
+    //chapter661
+    let matrix = vec![
+        vec![1, 4, 7, 11, 15],
+        vec![2, 5, 8, 12, 19],
+        vec![3, 6, 9, 16, 22],
+        vec![10, 13, 14, 17, 24],
+        vec![18, 21, 23, 26, 30],
+    ];
+    let result = chapter661::Solution::image_smoother(matrix);
+    println!("{:?}",result);
+
 
 }
