@@ -40,7 +40,9 @@
 
 // mod chapter240;
 
-mod chapter661;
+// mod chapter661;
+
+mod chapter80;
 
 fn main() {
     println!("hello world");
@@ -179,15 +181,18 @@ fn main() {
     // println!("{}",result)
 
     //chapter661
-    let matrix = vec![
-        vec![1, 4, 7, 11, 15],
-        vec![2, 5, 8, 12, 19],
-        vec![3, 6, 9, 16, 22],
-        vec![10, 13, 14, 17, 24],
-        vec![18, 21, 23, 26, 30],
-    ];
-    let result = chapter661::Solution::image_smoother(matrix);
-    println!("{:?}",result);
+    // let matrix = vec![
+    //     vec![1, 4, 7, 11, 15],
+    //     vec![2, 5, 8, 12, 19],
+    //     vec![3, 6, 9, 16, 22],
+    //     vec![10, 13, 14, 17, 24],
+    //     vec![18, 21, 23, 26, 30],
+    // ];
+    // let result = chapter661::Solution::image_smoother(matrix);
+    // println!("{:?}",result);
 
-
+    //chapter80
+    let mut nums = vec![1, 2, 2];
+    let result = chapter80::Solution::remove_duplicates(&mut nums);
+    println!("{:?}", result)
 }

@@ -10,17 +10,15 @@ impl Solution {
             for _ in 0..m {
                 row.push(0);
             }
-
             result.push(row);
         }
-        println!("{:?}", result);
 
         for i in 0..n {
             for j in 0..m {
                 let mut sum: i32 = 0;
                 let mut count: i32 = 0;
                 for k in i - 1..i + 2 {
-                    for l in j - 1..j + 1 {
+                    for l in j - 1..j + 2 {
                         if k >= 0 && k < n && l >= 0 && l < m {
                             count += 1;
                             sum += img[k as usize][l as usize];
