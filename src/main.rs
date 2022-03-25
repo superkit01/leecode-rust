@@ -44,10 +44,13 @@
 
 // mod chapter80;
 
-mod chapter94;
-use chapter94::*;
-use std::cell::RefCell;
-use std::rc::Rc;
+// mod chapter94;
+// use chapter94::*;
+// use std::cell::RefCell;
+// use std::rc::Rc;
+
+
+mod chapter172;
 
 fn main() {
     println!("hello world");
@@ -203,17 +206,21 @@ fn main() {
     
 
     //chapter94
-    let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
-        val: 1,
-        left: Some(Rc::new(RefCell::new(TreeNode {
-            val: 2,
-            left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
-            right: None,
-        }))),
-        right: Some(Rc::new(RefCell::new(TreeNode ::new(3)))),
-    })));
-    let result= chapter94::Solution::inorder_traversal(root);
-    println!("{:?}",result)
+    // let root: Option<Rc<RefCell<TreeNode>>> = Some(Rc::new(RefCell::new(TreeNode {
+    //     val: 1,
+    //     left: Some(Rc::new(RefCell::new(TreeNode {
+    //         val: 2,
+    //         left: Some(Rc::new(RefCell::new(TreeNode::new(4)))),
+    //         right: None,
+    //     }))),
+    //     right: Some(Rc::new(RefCell::new(TreeNode ::new(3)))),
+    // })));
+    // let result= chapter94::Solution::inorder_traversal(root);
+    // println!("{:?}",result)
+    
 
+    //chapter172
+    let result=chapter172::Solution::trailing_zeroes(30);
+    println!("{:?}",result);
 
 }
