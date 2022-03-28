@@ -52,7 +52,8 @@
 // mod chapter172;
 
 // mod chapter36;
-mod chapter682;
+// mod chapter682;
+mod chapter693;
 
 fn main() {
     println!("hello world");
@@ -237,16 +238,20 @@ fn main() {
     // println!("{}",result)
 
     //chapter682
-    let ops: Vec<String> = vec![
-        String::from("5"),
-        String::from("-2"),
-        String::from("4"),
-        String::from("C"),
-        String::from("D"),
-        String::from("9"),
-        String::from("+"),
-        String::from("+"),
-    ];
-    let result = chapter682::Solution::cal_points(ops);
+    // let ops: Vec<String> = vec![
+    //     String::from("5"),
+    //     String::from("-2"),
+    //     String::from("4"),
+    //     String::from("C"),
+    //     String::from("D"),
+    //     String::from("9"),
+    //     String::from("+"),
+    //     String::from("+"),
+    // ];
+    // let result = chapter682::Solution::cal_points(ops);
+    // println!("{}", result);
+
+    //chapter693
+    let result = chapter693::Solution::has_alternating_bits(5);
     println!("{}", result);
 }
