@@ -53,7 +53,9 @@
 
 // mod chapter36;
 // mod chapter682;
-mod chapter693;
+// mod chapter693;
+
+mod chapter66;
 
 fn main() {
     println!("hello world");
@@ -252,6 +254,10 @@ fn main() {
     // println!("{}", result);
 
     //chapter693
-    let result = chapter693::Solution::has_alternating_bits(5);
-    println!("{}", result);
+    // let result = chapter693::Solution::has_alternating_bits(5);
+    // println!("{}", result);
+
+    // chapter66
+    let result=chapter66::Solution::plus_one(vec![1,2,3]);
+    println!("{:?}",result);
 }
