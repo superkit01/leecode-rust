@@ -55,7 +55,9 @@
 // mod chapter682;
 // mod chapter693;
 
-mod chapter66;
+// mod chapter66;
+
+mod chapter50;
 
 fn main() {
     println!("hello world");
@@ -258,6 +260,11 @@ fn main() {
     // println!("{}", result);
 
     // chapter66
-    let result=chapter66::Solution::plus_one(vec![1,2,3]);
-    println!("{:?}",result);
+    // let result=chapter66::Solution::plus_one(vec![1,2,3]);
+    // println!("{:?}",result);
+
+    //chapter50
+    let result=chapter50::Solution::my_pow(3.0,3);
+    println!("{}",result)    
+
 }
