@@ -2,7 +2,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn my_pow(x: f64, n: i32) -> f64 {
-        let tmp_n=n as i64;
+        let tmp_n=n as i64;//i可能等于 -2147483648 需要转成i64暂存，这TM搞得我都快怀疑题目了
         if tmp_n < 0 {
             return 1.0 / Self::square(x, -tmp_n) ;
         } else {
