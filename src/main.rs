@@ -59,9 +59,13 @@
 
 // mod chapter50;
 
+<<<<<<< HEAD
 // mod chapter56;
 
 mod chapter71;
+=======
+mod chapter56;
+>>>>>>> a9c4e0887f7b3997aee9f447780d41cd9ad6c563
 
 fn main() {
     println!("hello world");
@@ -279,4 +283,5 @@ fn main() {
     //chapter71
     let result=chapter71::Solution::simplify_path(String::from("/root/home/data/../data/home"));
     println!("{}",result)
+
 }
