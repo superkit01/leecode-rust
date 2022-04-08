@@ -57,7 +57,11 @@
 
 // mod chapter66;
 
-mod chapter50;
+// mod chapter50;
+
+// mod chapter56;
+
+mod chapter71;
 
 fn main() {
     println!("hello world");
@@ -264,7 +268,15 @@ fn main() {
     // println!("{:?}",result);
 
     //chapter50
-    let result=chapter50::Solution::my_pow(3.0,3);
-    println!("{}",result)    
+    // let result=chapter50::Solution::my_pow(3.0,3);
+    // println!("{}",result)
 
+    //chapter56
+    // let intervals = vec![vec![1, 3], vec![2, 6], vec![8, 10], vec![15, 18]];
+    // let result = chapter56::Solution::merge(intervals);
+    // println!("{:?}", result)
+
+    //chapter71
+    let result=chapter71::Solution::simplify_path(String::from("/root/home/data/../data/home"));
+    println!("{}",result)
 }
