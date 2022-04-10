@@ -61,7 +61,9 @@
 
 // mod chapter56;
 
-mod chapter71;
+// mod chapter71;
+
+mod chapter804;
 
 fn main() {
     println!("hello world");
@@ -277,7 +279,11 @@ fn main() {
     // println!("{:?}", result)
 
     //chapter71
-    let result=chapter71::Solution::simplify_path(String::from("/root/home/data/../data/home"));
+    // let result=chapter71::Solution::simplify_path(String::from("/root/home/data/../data/home"));
+    // println!("{}",result)
+    
+    //chapter804
+    let words=vec![String::from("gin"), String::from("zen"), String::from("gig"), String::from("msg")];
+    let result = chapter804::Solution::unique_morse_representations(words);
     println!("{}",result)
-
 }
