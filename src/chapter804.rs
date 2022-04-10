@@ -55,11 +55,7 @@ impl Solution {
             }
 
             result.insert(temp);
-
         }
-
-
-
         return result.len() as i32;
     }
 }
