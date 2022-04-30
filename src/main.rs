@@ -65,7 +65,9 @@
 
 // mod chapter804;
 
-mod chapter97;
+// mod chapter97;
+
+mod chapter908;
 
 fn main() {
     println!("hello world");
@@ -290,7 +292,11 @@ fn main() {
     // println!("{}",result)
 
     //chapter97
-    let result=chapter97::Solution::is_interleave(String::from("aabcc"), String::from("dbbca"),  String::from("aadbbcbcac"));
+    // let result=chapter97::Solution::is_interleave(String::from("aabcc"), String::from("dbbca"),  String::from("aadbbcbcac"));
+    // println!("{}",result)
+
+    //chapter908
+    let result=chapter908::Solution::smallest_range_i(vec![1,3,6],3);
     println!("{}",result)
 
 }
